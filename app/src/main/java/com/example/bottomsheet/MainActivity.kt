@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.example.bottomsheet.databinding.ActivityMainBinding
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 if(newState== STATE_COLLAPSED){
                     Toast.makeText(this@MainActivity,"collapsed",Toast.LENGTH_SHORT).show()
                     mViewBg.setAlpha(1f)
-                    mViewBg.setBackgroundColor(Color.RED)
+                    mViewBg.setBackgroundColor(ContextCompat.getColor(this@MainActivity!!,R.color.light_purple))
                 }
             }
 
