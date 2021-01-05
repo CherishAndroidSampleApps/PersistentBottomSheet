@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewpagerAdapter:ViewPagerAdapter
+
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,19 +29,6 @@ class MainActivity : AppCompatActivity() {
         )
 
         binding.bottomViewpager.adapter=viewpagerAdapter
-
-        binding.bottomViewpager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener{
-            override fun onPageScrollStateChanged(state: Int) {}
-            override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {}
-
-            override fun onPageSelected(position: Int) {
-                binding.mainBottomNavi.menu.getItem(position).isChecked=true
-            }
-        })
 
         binding.mainBottomNavi.setOnNavigationItemSelectedListener{
             var index:Int by Delegates.notNull<Int>()

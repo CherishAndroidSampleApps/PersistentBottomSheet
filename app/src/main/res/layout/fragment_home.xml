@@ -3,17 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#8189b3"
+    android:fitsSystemWindows="true"
     android:id="@+id/bg_view"
     tools:context=".HomeFragment">
+
+    <ProgressBar
+        android:layout_width="13dp"
+        android:layout_height="165dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="50dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/progress_drawable_vertical"
+        android:max="100"
+        android:progress="73"
+        />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <include
+            android:id="@+id/main_bottom_sheet"
             layout="@layout/dialog_bottom_sheet" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
